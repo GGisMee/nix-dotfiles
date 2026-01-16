@@ -61,15 +61,18 @@
 
     # Keybindings
     binds = {
-      "Suoer+D".action.spawn = [ "fuzzel" ];
+      "Super+D".action.spawn = [ "fuzzel" ];
       "Super+L".action.spawn = [ "hyprlock" ];
       "Super+T".action.spawn "kitty";
-      "Super+Q".action.spawn = close-window;
+      "Super+Q".action = "close-window";
       
     };
 
     # Layout & Design
     layout = {
+      keyboard = {
+        xkb.layout = "se";
+      };
       gaps = 10;
       center-focused-column = "never";
     };
