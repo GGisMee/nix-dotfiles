@@ -29,7 +29,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     fuzzel
     swaynotificationcenter
     hyprlock
@@ -68,7 +68,7 @@
     binds = {
       "Super+D".action.spawn = [ "fuzzel" ];
       "Super+L".action.spawn = [ "hyprlock" ];
-      "Super+T".action.spawn "kitty";
+      "Super+T".action.spawn = "kitty";
       "Super+Q".action.close-window = {};
       "Super+Shift+E".action.quit = {};
       
@@ -93,7 +93,6 @@
     background = [{ path = "screenshot"; blur_passes = 2; }];
     input-field = [{ size = "200, 50"; outline_thickness = 3; }];
   };
-};
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
