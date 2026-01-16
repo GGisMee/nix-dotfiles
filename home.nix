@@ -63,6 +63,9 @@
     binds = {
       "Mod+D".action.spawn = [ "fuzzel" ];
       "Mod+L".action.spawn = [ "hyprlock" ];
+      "Mod+T".action.spawn "kitty";
+      "Mod+Q".action.spawn = close-window;
+      
     };
 
     # Layout & Design
