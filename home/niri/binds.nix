@@ -32,8 +32,8 @@
       # "Mod+Ctrl+L".action = "move-column-right";
 
       # F keys
-      "F12".action= {screenshot = {};};
-      "F12+shift".action= {screenshot-window = {};};
+      "print".action= {screenshot = {};};
+      "print+shift".action= {screenshot-window = {};};
 
  
       "XF86AudioRaiseVolume".action.spawn = [
