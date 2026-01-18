@@ -34,7 +34,7 @@
       gustav = home-manager.lib.homeManagerConfiguration {
         inherit pkgs; # Som input = input.
 	modules = [ 
-	hyprland.homeModules.default
+	hyprland.homeManagerModules.default
 	  # niri-flake.homeModules.niri
 	./home.nix ];
 	extraSpecialArgs = {
