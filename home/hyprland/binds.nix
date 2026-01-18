@@ -26,12 +26,23 @@
 	  "$mod, k, movefocus, u"
 	  "$mod, j, movefocus, d"
 
+	  # Maximize
+	  "$mod, m, fullscreen, 1"
+
 	  # Move window
 	  "$mod SHIFT, h,  movewindow, l"
 	  "$mod SHIFT, l, movewindow, r"
 	  "$mod SHIFT, k,    movewindow, u"
 	  "$mod SHIFT, j,  movewindow, d"
 
+	  # Move window to adjacent workspace
+	  "$caps,h, workspace, -1" # Super + [ - byt workspace
+	  "$caps, l, workspace, +1" # Super + ]
+	  "$caps, k,  movetoworkspace, -1" # flytta window
+	  "$caps, j, movetoworkspace, +1"
+
+
+	  # Power of or on
 	  "$mod Shift, Escape, exec, systemctl poweroff"
 	  "$mod, Escape, exec, systemctl suspend"
 
