@@ -3,7 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, lib, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -100,10 +99,18 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "input" "uinput"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-              tree
-              obsidian
-	      spotify
-	      vscode
+      tree
+      obsidian
+      spotify
+      (pkgs.vscode-with-extensions.override {
+       vscode = pkgs.vscode.override {
+       commandLineArgs = [
+       "--enable-features=UseOzonePlatform"
+       "--ozone-platform=wayland"
+       "--force-device-scale-factor=1"
+       ];
+       };
+       })
     ];
   };
   nixpkgs.config.allowUnfree = true;
