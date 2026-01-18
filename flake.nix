@@ -11,10 +11,10 @@
     #  url = "github:sodiboo/niri-flake";
     #   inputs.nixpkgs.follows="nixpkgs";
     # };
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
 
   };
-  outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, hyprland, ...} @ inputs:
+  outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, ...} @ inputs:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -34,7 +34,7 @@
       gustav = home-manager.lib.homeManagerConfiguration {
         inherit pkgs; # Som input = input.
 	modules = [ 
-	hyprland.homeManagerModules.default
+	# hyprland.homeManagerModules.default
 	./home.nix ];
 	extraSpecialArgs = {
           inherit pkgs-unstable;
