@@ -22,7 +22,6 @@
       "Mod+T".action.spawn = [ "kitty" ]; # Terminal
       "Mod+Q".action.close-window = []; # Close window
       "Mod+Shift+E".action.quit = []; # Exit niri
-      
       # "Mod+Ctrl+Left".action = "move-column-left";
       # "Mod+Ctrl+Right".action = "move-column-right";
       # "Mod+Ctrl+Up".action = "move-window-up";
@@ -31,30 +30,13 @@
       # "Mod+Ctrl+K".action = "move-window-up"; 
       # "Mod+Ctrl+L".action = "move-column-right";
 
-      # F keys
-      "print".action= {screenshot = {};};
-      "print+shift".action= {screenshot-window = {};};
+      "Mod+shift+S".action= {screenshot = {};};
+      "shift+F12".action= {screenshot-window = {};};
 
- 
-      "XF86AudioRaiseVolume".action.spawn = [
-      "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@"
-      "0.1+"
-      ];
-      "XF86AudioRaiseVolume".allow-when-locked = true;
-      "XF86AudioLowerVolume".action.spawn = [
-	      "wpctl"
-		      "set-volume"
-		      "@DEFAULT_AUDIO_SINK@"
-		      "0.1-"
-      ];
-      "XF86AudioLowerVolume".allow-when-locked = true;
-      "XF86AudioMute".action.spawn = [
-	      "wpctl"
-		      "set-mute"
-		      "@DEFAULT_AUDIO_SINK@"
-		      "toggle"
-      ];
-      "XF86AudioMute".allow-when-locked = true;
+      "XF86AudioRaiseVolume".action.spawn = [ "wpctl" "set-volume" "-l" "2" "@DEFAULT_AUDIO_SINK@" "5%+" ];
+      "XF86AudioLowerVolume".action.spawn = [ "wpctl" "set-volume" "-l" "1" "@DEFAULT_AUDIO_SINK@" "5%-" ];
+      
+      # "XF86AudioMute".allow-when-locked = true;
       "XF86AudioMicMute".action.spawn = [
 	      "wpctl"
 		      "set-mute"
