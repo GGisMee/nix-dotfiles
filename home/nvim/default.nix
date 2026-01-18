@@ -2,16 +2,13 @@
 {
   programs.neovim = {
     enable = true;
-    configure = {
-      customRC = ''set nowrap'';
-      packages.myVimPackage = with pkgs.vimPlugins; {
-	start = [ 
+    defaultEditor = true;
+    extraConfig = ''set nowrap'';
+    plugins = with pkgs.vimPlugins; [
 	nvim-lspconfig          # LSP
 	nvim-treesitter.withAllGrammars # Syntax
 	telescope-nvim          # Sök
 	catppuccin-nvim         # Tema
-	];
-    };
+    ];
   };
-};
 }
