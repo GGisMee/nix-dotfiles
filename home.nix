@@ -41,6 +41,7 @@
 	    NIXOS_OZONE_WL = "1";
 	  };
 
+
 	  home.packages = with pkgs; [
 	    fuzzel # open app
 	    swaynotificationcenter
@@ -53,6 +54,7 @@
 	    slurp # selecting regions for grim
 	    wl-clipboard # copy pasting
 
+	    volantes-cursors
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

@@ -16,9 +16,9 @@
     };
 
     decoration = {
-      rounding = 6;
+      rounding = 15;
 
-      blur = {
+      blur = { # Egentligen onödig om windowsen inte är genomskinliga
         enabled = true;
         size = 9;
         passes = 2;
