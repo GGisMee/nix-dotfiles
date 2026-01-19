@@ -18,18 +18,18 @@
 	bind = [
 	  # Apps
 	  "$mod, $mod_L, exec, pkill fuzzel || fuzzel"
-	  "$mod, T, exec, kitty"
-	  "$mod, B, exec, firefox"
-	  "$mod, N, exec, obsidian"
+	  "$mod, t, exec, kitty"
+	  "$mod, b, exec, firefox"
+	  "$mod, n, exec, obsidian"
 
 	  # Shortcut keys
-	  "$mod, Q, killactive,"
+	  "$mod, q, killactive"
 
 	  # floating stuff
-	  "$mod, G, togglefloating,"
+	  "$mod, g, togglefloating"
 
 	  # Stack windows together
- 	  "$mod, S, togglegroup,"
+ 	  "$mod, s, togglegroup"
 
 	  # Change windows
 	  "$mod, h, movefocus, l"
@@ -47,7 +47,7 @@
 	  "$mod, m, fullscreen, 1"
 
 	  # Two vertical to two horisontal
-	  "$mod, o, togglesplit,"
+	  "$mod, o, togglesplit"
 
 
 	  # Move window
