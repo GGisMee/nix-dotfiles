@@ -124,8 +124,8 @@
     vim
     wget
     kitty # terminal
-    htop
     git
+    git-lfs
     ssh-askpass-fullscreen
     python3
     wl-clipboard

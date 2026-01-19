@@ -9,14 +9,6 @@
 	  home.username = "gustav";
 	  home.homeDirectory = "/home/gustav";
 
-	  programs.git = {
-	    enable = true;
-	    settings.user = {
-	      name = "gustavg";
-	      email = "gustav.gamstedt@outlook.com";
-	    };
-	    settings.init.defaultBranch = "main"; # bra att ha skriven, kan annars komma onödiga felmeddelanden.
-	  };
 
 	  # This value determines the Home Manager release that your configuration is
 	  # compatible with. This helps avoid breakage when a new Home Manager release
