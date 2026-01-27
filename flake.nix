@@ -8,13 +8,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Spotify but cli
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, spicetify-nix, ...} @ inputs:
+  outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, spicetify-nix, stylix, ...} @ inputs:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -42,7 +45,7 @@
 	modules = [ 
 	  spicetify-nix.homeManagerModules.default
 	  ./home.nix 
-	  inputs.stylix.nixosModules.stylix
+	  stylix.homeModules.stylix
 	];
 	extraSpecialArgs = {
           inherit pkgs-unstable inputs;

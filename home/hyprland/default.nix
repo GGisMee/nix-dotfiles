@@ -6,6 +6,7 @@
     ./mouse.nix
     ./monitor.nix
     ./waybar.nix
+    ./stylix.nix
   ];
 
    # Removes default background for custom choices
