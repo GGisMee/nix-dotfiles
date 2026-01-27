@@ -6,5 +6,6 @@
     ./kitty.nix
     ./spicetify.nix
     ./pen_settings.nix
+    ./firefox.nix
   ];
 }

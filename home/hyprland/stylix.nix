@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     image = ./nix_wallpaper.png; # Required: path to your wallpaper
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
   
     # Optional: Define global font settings
     fonts = {

@@ -33,7 +33,10 @@
     nixosConfigurations = {
       gustav = lib.nixosSystem {
         inherit system;
-	modules = [ ./system/configuration.nix ];
+	modules = [ 
+	./system/configuration.nix 
+	stylix.nixosModules.stylix
+	];
 	specialArgs = {
           inherit pkgs-unstable;
 	};
