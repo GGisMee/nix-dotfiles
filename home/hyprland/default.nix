@@ -5,6 +5,7 @@
     ./looks.nix
     ./mouse.nix
     ./monitor.nix
+    ./waybar.nix
   ];
 
    # Removes default background for custom choices

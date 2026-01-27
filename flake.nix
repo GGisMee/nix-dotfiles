@@ -8,15 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix.url = "github:danth/stylix";
+
     # Spotify but cli
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-    # niri-flake = {
-    #  url = "github:sodiboo/niri-flake";
-    #   inputs.nixpkgs.follows="nixpkgs";
-    # };
-    # hyprland.url = "github:hyprwm/Hyprland";
-
   };
   outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, spicetify-nix, ...} @ inputs:
     let
@@ -44,9 +40,10 @@
       gustav = home-manager.lib.homeManagerConfiguration {
         inherit pkgs; # Som input = input.
 	modules = [ 
-	# hyprland.homeManagerModules.default
-	spicetify-nix.homeManagerModules.default
-	./home.nix ];
+	  spicetify-nix.homeManagerModules.default
+	  ./home.nix 
+	  inputs.stylix.nixosModules.stylix
+	];
 	extraSpecialArgs = {
           inherit pkgs-unstable inputs;
 	};

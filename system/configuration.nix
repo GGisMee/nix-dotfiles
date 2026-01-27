@@ -58,16 +58,6 @@
     '';
   };
 };
-  # display manager
-  
-  # Cosmic stuff
-  # services.displayManager.cosmic-greeter.enable = true;
-  # services.desktopManager.cosmic.enable = true;
-
-  # Gammalt
-  # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
   
   services.displayManager = {
     sddm.enable = true;
@@ -109,8 +99,16 @@
   };
   nixpkgs.config.allowUnfree = true;
   programs.firefox.enable = true;
-  programs.steam.enable = true;
-
+  programs.steam = {
+    enable = true;
+    package = pkgs.steam.override {
+      extraBwrapArgs = [ "--setenv GDK_DPI_SCALE 1.5" ]; 
+    };
+  };
+  environment.variables = {
+    # Fix for unproperly scaled apps
+    NIXOS_OZONE_WL = "1";
+  };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
