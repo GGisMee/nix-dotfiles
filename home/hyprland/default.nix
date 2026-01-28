@@ -5,7 +5,6 @@
     ./looks.nix
     ./mouse.nix
     ./monitor.nix
-    ./waybar.nix
     ./stylix.nix
   ];
 

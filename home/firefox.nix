@@ -1,5 +1,6 @@
 {pkgs, lib,...}: 
 {
+stylix.targets.firefox.enable = false;
 programs.firefox = {
   enable = true;
   #profiles.gustav = {  # Här sätter du namnet till "gustav"
