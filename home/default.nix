@@ -8,5 +8,8 @@
     ./spicetify.nix
     ./pen_settings.nix
     ./firefox.nix
+    ./mouse.nix
+    ./exec-once.nix
+    ./monitor.nix
   ];
 }

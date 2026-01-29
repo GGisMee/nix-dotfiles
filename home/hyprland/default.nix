@@ -3,10 +3,7 @@
     ./binds.nix
     ./stack.nix
     ./looks.nix
-    ./mouse.nix
-    ./monitor.nix
     ./stylix.nix
-    ./exec-once.nix
   ];
 
    # Removes default background for custom choices
