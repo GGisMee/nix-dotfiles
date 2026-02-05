@@ -15,8 +15,11 @@ services.kanata = {
 # Aktivera sensorer för rotation och tablet-mode detektering
 hardware.sensor.iio.enable = true;
 
-# Säkerställ att uinput (för Kanata) har rätt rättigheter
+
 services.udev.extraRules = ''
-  KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"
+  # Hitta switchen och säg till libinput att ignorera den
+  ATTRS{name}=="Intel HID switches", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+  ATTRS{name}=="HP WMI hotkeys", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+  ATTRS{name}=="Lid Switch", ENV{LIBINPUT_IGNORE_DEVICE}="1"
 '';
 }
