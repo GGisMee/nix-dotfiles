@@ -28,7 +28,7 @@
     animation-direction: alternate;
 }
 
-/* Separera workspaces i egna boxar om önskat */
+/* Separera workspaces i egna boxar*/
 #workspaces button {
     background: @base01;
     margin: 4px 2px;

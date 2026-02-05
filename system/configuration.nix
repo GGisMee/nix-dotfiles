@@ -79,6 +79,8 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  nix.settings.trusted-users = [ "roots" "gustav"];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gustav = {
     isNormalUser = true;
@@ -109,8 +111,10 @@
     git-lfs
     ssh-askpass-fullscreen
     python3
+    devenv # venv but nix
     wl-clipboard
     kanata # for rebinding caps
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
