@@ -57,6 +57,9 @@
     extraPortals = [pkgs.xdg-desktop-portal-hyprland ];
   };
 
+  # nix-ld för python
+  programs.nix-ld.enable = true;
+
   # programs.niri.enable = true;
   programs.hyprland.enable = true;
 
@@ -80,7 +83,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gustav = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "input" "uinput"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" "input" "uinput" "networkmanager"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -99,7 +102,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    neovim # editor
     vim
     wget
     kitty # terminal
@@ -110,6 +112,7 @@
     devenv # venv but nix
     wl-clipboard
     kanata # for rebinding caps
+    nodejs
 
   ];
 

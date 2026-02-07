@@ -1,7 +1,7 @@
 {
   imports = [
     ./hyprland
-    ./nvim
+    # ./nvim # Tidigare nvim innan lazyvim
     ./waybar
     ./btop.nix
     ./kitty.nix
@@ -11,5 +11,6 @@
     ./mouse.nix
     ./exec-once.nix
     ./monitor.nix
+    ./lazyvim.nix
   ];
 }
