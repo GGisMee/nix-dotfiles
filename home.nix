@@ -60,6 +60,9 @@
 
       trash-cli # nice app for handeling trash
   ];
+
+  programs.bash.enable = true;
+
   # programs.niri.enable = true;
   # Fuzzel (Launcher)
   programs.fuzzel.enable = true;
