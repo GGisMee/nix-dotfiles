@@ -12,5 +12,6 @@
     ./exec-once.nix
     ./monitor.nix
     ./lazyvim.nix
+    ./direnv.nix
   ];
 }
