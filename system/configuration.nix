@@ -8,6 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./keyboard-kanata.nix
+      ./power.nix
     ];
 
   # Enable flakes

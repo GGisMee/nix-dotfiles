@@ -1,6 +1,7 @@
 {pkgs, config, ...}: 
 {
 home.packages= with pkgs; [
+  neovim
   git
   gcc
   gnumake
@@ -11,6 +12,10 @@ home.packages= with pkgs; [
   lua-language-server
   stylua
   nil # Nix LSP
+
+  # Python 
+  ruff
+  pyright
 
   # PDF + Matematik
   ghostscript
