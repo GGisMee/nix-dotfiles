@@ -16,7 +16,7 @@
       turbo = "auto";
     };
   };
-
+  environment.systemPackages = [ pkgs.powertop ];
   # 3. Termisk kontroll (Intel-specifikt)
   services.thermald.enable = true;
 
