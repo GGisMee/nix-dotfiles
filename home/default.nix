@@ -13,5 +13,6 @@
     ./monitor.nix
     ./lazyvim.nix
     ./direnv.nix
+    ./hyprlock.nix
   ];
 }

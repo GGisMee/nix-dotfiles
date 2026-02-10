@@ -40,7 +40,6 @@
 	  home.packages = with pkgs; [
 	    fuzzel # open app
 	    swaynotificationcenter
-	    hyprlock # lockscreen
 	    swww
 	    waybar
 
@@ -70,12 +69,6 @@
     main.terminal = "${pkgs.foot}/bin/foot";
   };
 
-  # Hyprlock
-  programs.hyprlock.enable = true;
-  programs.hyprlock.settings = {
-    # background = [{ path = "screenshot"; blur_passes = 2; }];
-    # input-field = [{ size = "200, 50"; outline_thickness = 3; }];
-  };
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
