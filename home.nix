@@ -30,6 +30,7 @@
 	    NIXOS_OZONE_WL = "1";
 	    QT_QPA_PLATFORM = "wayland";
 	    GDK_BACKEND = "wayland";
+      EDITOR = "nvim";
 	  };
 	  wayland.windowManager.hyprland.settings = {
 	    xwayland = {
@@ -58,6 +59,12 @@
 	    (utils.waylandFix vscode "code")
 
       trash-cli # nice app for handeling trash
+      yazi # nice app for file managing
+
+      gemini-cli
+ 
+
+
   ];
 
   programs.bash.enable = true;
